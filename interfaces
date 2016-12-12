@@ -1,0 +1,16 @@
+# This file describes the network interfaces available on your system
+# and how to activate them. For more information, see interfaces(5).
+
+source /etc/network/interfaces.d/*
+
+# The loopback network interface
+auto lo
+iface lo inet loopback
+
+auto wlp3s0
+iface wlp3s0 inet static
+address 10.0.0.50
+netmask 255.255.255.0
+gateway 10.0.0.254
+broadcast 10.0.0.255
+dns-nameservers 8.8.8.8 8.8.4.4 10.0.0.254
